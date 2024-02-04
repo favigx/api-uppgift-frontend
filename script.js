@@ -43,10 +43,10 @@ function printPokemons(){
                             catchedPokemons();
                         })
                     })
-
+                    li.appendChild(pokemonImg);
                     li.appendChild(typeElement);
                     li.appendChild(catchBtn);
-                    li.appendChild(pokemonImg);
+                    
                     pokemonList.appendChild(li);
                 })
         });
@@ -54,14 +54,14 @@ function printPokemons(){
 }
 
 function catchedPokemons() {
+
     fetch("http://localhost:8080/pokemons")
         .then(res => res.json())
         .then(data => {
-            console.log("Received data:", data);
             data.forEach(pokemon => {
                     let li = document.createElement("li");
                     li.innerText = pokemon.name;
-
+                    
                     let removeBtn = document.createElement("button");
                     removeBtn.innerText = "Ta bort";
 
@@ -70,13 +70,10 @@ function catchedPokemons() {
                         fetch("http://localhost:8080/delete-pokemon/" + pokemon.id,{
                             method: "DELETE"
                         })
-                        
                         .then(data =>{
-                            console.log("data", data);
-                            
+
                         catchedList.innerHTML = "";
                         catchedPokemons();
-                            
                         })    
                     })
                  

@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(189, 197, 167);
+}
+
+.box {
+    display: flex;
+}
+
+.pokemonBox, .catchedBox {
+    flex: 1; 
+    margin: 10px; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pokemonBox{
+    overflow: auto;
+    resize: none;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 10px;
+    outline: solid 2px rgb(0, 0, 0);
+    background-color: rgb(136, 136, 168);
+    max-width: 70rem;
+    max-height: 40rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.catchedBox{
+    overflow: auto;
+    resize: none;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 10px;
+    outline: solid 2px rgb(0, 0, 0);
+    background-color: rgb(224, 26, 26);
+    max-width: 70rem;
+    max-height: 40rem;
+    border-radius: 10px;
+}
